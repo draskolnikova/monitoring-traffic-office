@@ -9,8 +9,8 @@ $config = array(
     'logo'     => 'https://beritagar.id/images/logo-beritagar.svg',
     'template' => 'desktop',
     'server'   => 'Beritagar',
-    'interface' => 'ether1_WAN,ether2_LAN',
-    'interface_monitor' => true, // Change false to unmonitor interface
-    'socket_host' => 'http://localhost:8081', // Change with your socket listen address
-    'localhost' => 'http://localhost:4000'
+    'interface' => 'ether1_WAN,ether2_LAN', // Which interface should be monitored?
+    'interface_monitor' => false, // Change true to monitor interface (default: false)
+    'socket_host' => 'http://' . $_SERVER["SERVER_ADDR"] . ':8081', // Change with your socket listen address
+    'localhost' => 'http://' . $_SERVER['SERVER_ADDR'] // Change with your HTTP Port
 );
